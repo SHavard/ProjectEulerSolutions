@@ -15,7 +15,9 @@ gridSize = 20
 factorial :: Integer -> Integer
 factorial x = product [1..x]
 
+--Purely for readability (pretty bad practice- fight me)
 numPermutations :: Integer -> Integer
 numPermutations = factorial
 
+-- total permutations of 20 accross 20 down, removing semantically equiv. permutations
 problem = numPermutations (2*gridSize) `div` (numPermutations gridSize)^2
